@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pyapp
+  name: webapp
   labels:
-    app: pyapp
+    app: webapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pyapp
+      app: webapp
   template:
     metadata:
       labels:
-        app: pyapp
+        app: webapp
     spec:
       containers:
-        - name: pyapp
-          image: sumonaust/webapp:5065399
+        - name: webapp
+          image: sumonaust/webapp:v1.0.0
           ports:
             - containerPort: 8000
