@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - sumonaust/webapp:v1.0.3
